@@ -12,7 +12,23 @@ import (
 type RandomUserEvent struct {
 	Name      string `json:"name"`
 	Uid       string `json:"uid"`
-	Timestamp string `json:"timestamp"`
+	Timestamp string `json:"timeStamp"`
+	EventType string `json:"eventType"`
+	ProductId string `json:"productId"`
+}
+
+type ProductViewed struct {
+	Name      string `json:"name"`
+	Uid       string `json:"uid"`
+	Timestamp string `json:"timeStamp"`
+	EventType string `json:"eventType"`
+	ProductId string `json:"productId"`
+}
+
+type ProductAddedToCart struct {
+	Name      string `json:"name"`
+	Uid       string `json:"uid"`
+	Timestamp string `json:"timeStamp"`
 	EventType string `json:"eventType"`
 	ProductId string `json:"productId"`
 }

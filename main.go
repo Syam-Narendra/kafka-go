@@ -10,7 +10,7 @@ func main() {
 
 	for {
 		time.Sleep(500 * time.Millisecond)
-		event := producer.GenerateRandUserEvent()
+		var event string = producer.GenerateRandUserEvent()
 		fmt.Println(event)
 
 	}
