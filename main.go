@@ -3,22 +3,16 @@ package main
 import (
 	"fmt"
 	"time"
-
-	"github.com/bxcodec/faker/v4"
+	"v1/producer"
 )
 
 func main() {
 
 	for {
 		time.Sleep(500 * time.Millisecond)
+		event := producer.GenerateRandUserEvent()
+		fmt.Println(event)
 
-		user := map[string]string{
-			"name":     faker.FirstName(),
-			"email":    faker.Email(),
-			"password": faker.Password(),
-		}
-
-		fmt.Println(user["name"])
 	}
 
 }
